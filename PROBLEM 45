@@ -1,0 +1,8 @@
+WITH PREPTABLE AS (
+SELECT MAX(classroom ) AS classroom , 
+COUNT(classroom ) AS Count
+FROM Schedule
+GROUP BY (classroom )
+ORDER BY COUNT DESC 
+LIMIT 2)
+SELECT classroom  FROM PREPTABLE
